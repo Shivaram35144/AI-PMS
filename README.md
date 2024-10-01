@@ -194,5 +194,3 @@ RELATIONS:
 * Users-Tasks: One-to-Many -- A user can be assigned to many tasks, and each task can have one user assigned
 * Tasks-Comments: One-to-Many
 * Projects-AI Insights: One-to-Many
-
-## 4. 
