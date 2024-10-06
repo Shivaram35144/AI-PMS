@@ -1,0 +1,53 @@
+project-management-backend/
+│
+├── ai/                           # AI-related functionalities
+│   ├── __init__.py
+│   ├── automation.py              # AI logic for task assignment, priority, insights
+│   └── insights.py                # AI-driven insights and analytics
+│
+├── project_management/            # Main Django project folder (created by Django)
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py                # Django settings (you'll configure MongoDB here)
+│   ├── urls.py                    # Main URL routing
+│   ├── wsgi.py
+│   └── templates/                 # Templates for any web-based UI (optional)
+│       └── base.html              # Base HTML template (if you're using Django frontend)
+│
+├── core_app/                      # Custom app for project management functionalities
+│   ├── __init__.py
+│   ├── admin.py                   # Django admin (for user management, etc.)
+│   ├── apps.py                    # App configuration
+│   ├── models.py                  # Django models (integrated with MongoDB)
+│   ├── views.py                   # Views/Controllers for handling requests
+│   ├── serializers.py             # Serializers for REST API (if using DRF)
+│   ├── urls.py                    # URLs for this app
+│   ├── tasks.py                   # Task management views
+│   ├── projects.py                # Project management views
+│   └── utils.py                   # Helper functions (e.g., task assignment logic)
+│
+├── authentication_app/            # Custom app for user authentication and management
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py                  # User profile and role-based access models
+│   ├── views.py                   # Login, signup, and profile views
+│   ├── urls.py                    # URLs for this app
+│   └── serializers.py             # Serializers for user data
+│
+├── static/                        # Static files (CSS, JavaScript, images)
+│   ├── css/
+│   └── js/
+│
+├── media/                         # Uploaded files (e.g., file sharing in tasks)
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_tasks.py              # Unit tests for task management functionality
+│   ├── test_projects.py           # Unit tests for project management functionality
+│   └── test_authentication.py     # Unit tests for authentication
+│
+├── manage.py                      # Django's command-line utility
+├── requirements.txt               # Python dependencies (Django, Djongo/MongoEngine, etc.)
+├── README.md                      # Project documentation
+└── .env                           # Environment variables (DB credentials, secret keys)

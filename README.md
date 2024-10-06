@@ -133,7 +133,7 @@ HAVE TO DO THE WIREFRAMES AND DESIGN
 | email | VARCHAR(100) | UNIQUE, NOT NULL |
 | password_hash | VARCHAR(255) | NOT NULL |
 | role | VARCHAR(50) | CHECK(role IN ('Admin', 'Project Manager', 'User')), DEFAULT 'User' |
-| skills | TEXT[] | Array of skills |
+| skills | {TEXT[]} | Array of skills |
 | availability | BOOLEAN | DEFAULT TRUE |
 | created_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP |
 | updated_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP |
@@ -144,6 +144,9 @@ HAVE TO DO THE WIREFRAMES AND DESIGN
 |---|---|---|
 | project_id | SERIAL | PRIMARY KEY |
 | project_name | VARCHAR(150) | NOT NULL |
+|priority|
+|team_members|
+| label | VARCHAR(150) | NOT NULL |
 | description | TEXT |  |
 | status | VARCHAR(50) | CHECK(status IN ('Active', 'Completed', 'On Hold')), DEFAULT 'Active' |
 | deadline | TIMESTAMP |  |
@@ -189,7 +192,7 @@ HAVE TO DO THE WIREFRAMES AND DESIGN
 
 RELATIONS:
 
-* Users-Projects: One-to-Many
+* Users-Projects: One-to-One
 * Projects-Tasks: One-to-Many
 * Users-Tasks: One-to-Many -- A user can be assigned to many tasks, and each task can have one user assigned
 * Tasks-Comments: One-to-Many
